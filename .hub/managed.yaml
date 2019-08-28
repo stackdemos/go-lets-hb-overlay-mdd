@@ -1,0 +1,51 @@
+parameters:
+  - name: application.description
+    value: Golang microservice with Gorilla Mux on an overlay with Let's Encrypt
+  - name: application.ingress
+    value: go-lets-hb-overlay-mdd.app.base-k8s-lets.demo10.superhub.io
+  - name: application.name
+    value: go-lets-hb-overlay-mdd
+  - name: application.namespace
+    value: applications
+  - name: application.path
+    value: /
+  - name: application.replicas
+    value: '1'
+  - name: component.dex.okta.appId
+    value: 0oa4lxjs1cWJUAY0t2p7
+  - name: component.dex.okta.clientId
+    value: 0oa4lxjs1cWJUAY0t2p7
+  - name: component.dex.okta.issuer
+    value: 'https://agilestacks.okta.com'
+  - name: component.docker.auth.basic.username
+    value: admin
+  - name: component.docker.auth.host
+    value: cicd-lets-overlay-harbor.app.base-k8s-lets.demo10.superhub.io
+  - name: component.docker.registry.image
+    value: >-
+      cicd-lets-overlay-harbor.app.base-k8s-lets.demo10.superhub.io/library/go-lets-hb-overlay-mdd
+  - name: component.docker.registry.kind
+    value: harbor
+  - name: component.docker.registry.url
+    value: cicd-lets-overlay-harbor.app.base-k8s-lets.demo10.superhub.io/library
+  - name: component.github.repository.name
+    value: go-lets-hb-overlay-mdd
+  - name: component.github.repository.organization
+    value: stackdemos
+outputs:
+  - name: application.description
+  - name: application.ingress
+  - name: application.name
+  - name: application.namespace
+  - name: application.path
+  - name: application.replicas
+  - name: component.dex.okta.appId
+  - name: component.dex.okta.clientId
+  - name: component.dex.okta.issuer
+  - name: component.docker.auth.basic.username
+  - name: component.docker.auth.host
+  - name: component.docker.registry.image
+  - name: component.docker.registry.kind
+  - name: component.docker.registry.url
+  - name: component.github.repository.name
+  - name: component.github.repository.organization
